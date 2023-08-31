@@ -26,3 +26,7 @@ https://github.com/tugalsan/com.tugalsan.tut.graalvm/blob/main/install.txt
 - //mvnw mn:run
 - target\cloud.exe
 - firefox http://localhost:8080/helloController
+
+[TODO]
+- how to change groupId from "com.tugalsan.spi" to "com.tugalsan"
+- how to change artifactId from "cloud" to "com.tugalsan.spi.cloud"
