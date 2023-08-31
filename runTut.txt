@@ -9,7 +9,7 @@ https://github.com/tugalsan/com.tugalsan.tut.graalvm/blob/main/install.txt
 
 [CREATE PROJECT]
 - @ Any Comand Prompt
-- cd Z:\com.tugalsan.spi.cloud
+- cd Z:\
 - mn create-app com.tugalsan.spi.cloud --build=maven --lang=java --features=graalvm,serialization-jackson
 - rename cloud com.tugalsan.spi.cloud
 - cd com.tugalsan.spi.cloud
