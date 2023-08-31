@@ -8,7 +8,7 @@ https://github.com/tugalsan/com.tugalsan.tut.graalvm/blob/main/install.txt
   - PATH+=C:\me\codes\micronaut\MICRONAUT_HOME\bin
 
 [COMPILE Native]
-- Open: x64 Native Tools Command Prompt for VS 2022 Preview
+- @ x64 Native Tools Command Prompt for VS 2022 Preview
 - cd C:\me\codes\com.tugalsan\spi
 - mn create-app com.tugalsan.spi.cloud --build=maven --lang=java --features=graalvm,serialization-jackson
 - rename cloud com.tugalsan.spi.cloud
