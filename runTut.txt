@@ -7,16 +7,20 @@ https://github.com/tugalsan/com.tugalsan.tut.graalvm/blob/main/install.txt
   - MICRONAUT_HOME=C:\me\codes\micronaut\MICRONAUT_HOME
   - PATH+=C:\me\codes\micronaut\MICRONAUT_HOME\bin
 
-[COMPILE Native]
-- @ x64 Native Tools Command Prompt for VS 2022 Preview
-- cd C:\me\codes\com.tugalsan\spi
+[CREATE PROJECT]
+- @ Any Comand Prompt
+- cd C:\me\codes\VBoxShare
 - mn create-app com.tugalsan.spi.cloud --build=maven --lang=java --features=graalvm,serialization-jackson
 - rename cloud com.tugalsan.spi.cloud
 - cd com.tugalsan.spi.cloud
 - mn create-controller HelloController
-- //mvnw mn:run
+
+[COMPILE Native]
+- @ x64 Native Tools Command Prompt for VS 2022 Preview
+- cd C:\me\codes\VBoxShare\com.tugalsan.spi.cloud
 - mvnw package -Dpackaging=native-image
 
 [RUN]
+- //mvnw mn:run
 - target/cloud.exe
 - firefox http://localhost:8080/helloController
