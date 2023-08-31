@@ -1,0 +1,242 @@
+C:\Users\me\Desktop\com.tugalsan.spi.cloud>runEnv.bat
+
+C:\Users\me\Desktop\com.tugalsan.spi.cloud>systeminfo   | findstr /B /C:"OS Name" /B /C:"OS Version"
+OS Name:                   Microsoft Windows 11 Pro
+OS Version:                10.0.22621 N/A Build 22621
+
+C:\Users\me\Desktop\com.tugalsan.spi.cloud>java -version
+java version "20.0.2" 2023-07-18
+Java(TM) SE Runtime Environment Oracle GraalVM 20.0.2+9.1 (build 20.0.2+9-jvmci-23.0-b14)
+Java HotSpot(TM) 64-Bit Server VM Oracle GraalVM 20.0.2+9.1 (build 20.0.2+9-jvmci-23.0-b14, mixed mode, sharing)
+
+C:\Users\me\Desktop\com.tugalsan.spi.cloud>mn -Version
+Micronaut Version: 4.0.5
+C:\Users\me\Desktop\com.tugalsan.spi.cloud>runMake.bat
+
+C:\Users\me\Desktop\com.tugalsan.spi.cloud>mvnw package -Dpackaging=native-image
+[INFO] Scanning for projects...
+[INFO]
+[INFO] -----------------------< com.tugalsan.spi:cloud >-----------------------
+[INFO] Building cloud 0.1
+[INFO]   from pom.xml
+[INFO] ----------------------------[ native-image ]----------------------------
+[INFO]
+[INFO] --- enforcer:3.3.0:enforce (micronaut-enforce) @ cloud ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] Rule 1: io.micronaut.maven.enforcer.CheckSnakeYaml passed
+[INFO]
+[INFO] --- mn:4.0.4:generate-openapi-generic (default-generate-openapi-generic) @ cloud ---
+[INFO]
+[INFO] --- mn:4.0.4:generate-openapi-client (default-generate-openapi-client) @ cloud ---
+[INFO]
+[INFO] --- mn:4.0.4:generate-openapi-server (default-generate-openapi-server) @ cloud ---
+[INFO]
+[INFO] --- resources:3.3.1:resources (default-resources) @ cloud ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO]
+[INFO] --- compiler:3.11.0:compile (default-compile) @ cloud ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- mn:4.0.4:aot-analysis (default-aot-analysis) @ cloud ---
+[INFO]
+[INFO] --- mn:4.0.4:graalvm-resources (default-graalvm-resources) @ cloud ---
+[INFO] Generating C:\Users\me\Desktop\com.tugalsan.spi.cloud\target\classes\META-INF\native-image\com.tugalsan.spi\cloud\resource-config.json
+[INFO]
+[INFO] --- jar:3.3.0:jar (default-jar) @ cloud ---
+[INFO] Building jar: C:\Users\me\Desktop\com.tugalsan.spi.cloud\target\cloud-0.1.jar
+[INFO]
+[INFO] --- native:0.9.22:compile-no-fork (default-compile-no-fork) @ cloud ---
+[INFO] Found GraalVM installation from JAVA_HOME variable.
+[INFO] [graalvm reachability metadata repository for io.netty:netty-transport:4.1.96.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for io.netty:netty-transport:4.1.96.Final]: Configuration directory is io.netty\netty-transport\4.1.80.Final
+[WARNING] Properties file at 'jar:file:///C:/Users/me/.m2/repository/io/micronaut/micronaut-http/4.0.5/micronaut-http-4.0.5.jar!/META-INF/native-image/io.micronaut.http/micronaut-http/native-image.properties' does not match the recommended 'META-INF/native-image/io.micronaut/micronaut-http/native-image.properties' layout.
+[INFO] [graalvm reachability metadata repository for io.netty:netty-handler:4.1.96.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for io.netty:netty-handler:4.1.96.Final]: Configuration directory is io.netty\netty-handler\4.1.80.Final
+[INFO] [graalvm reachability metadata repository for io.netty:netty-common:4.1.96.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for io.netty:netty-common:4.1.96.Final]: Configuration directory is io.netty\netty-common\4.1.80.Final
+[INFO] [graalvm reachability metadata repository for io.netty:netty-codec-http:4.1.96.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for io.netty:netty-codec-http:4.1.96.Final]: Configuration directory is io.netty\netty-codec-http\4.1.80.Final
+[INFO] [graalvm reachability metadata repository for io.netty:netty-buffer:4.1.96.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for io.netty:netty-buffer:4.1.96.Final]: Configuration directory is io.netty\netty-buffer\4.1.80.Final
+[INFO] [graalvm reachability metadata repository for ch.qos.logback:logback-classic:1.4.8]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for ch.qos.logback:logback-classic:1.4.8]: Configuration directory is ch.qos.logback\logback-classic\1.4.1
+[INFO] [graalvm reachability metadata repository for io.netty:netty-codec-http2:4.1.96.Final]: Configuration directory not found. Trying latest version.
+[INFO] [graalvm reachability metadata repository for io.netty:netty-codec-http2:4.1.96.Final]: Configuration directory is io.netty\netty-codec-http2\4.1.80.Final
+[INFO] Executing: C:\java\bin\native-image.cmd @target\tmp\native-image-630565723994789824.args
+========================================================================================================================
+GraalVM Native Image: Generating 'cloud' (executable)...
+========================================================================================================================
+For detailed information and explanations on the build output, visit:
+https://github.com/oracle/graal/blob/master/docs/reference-manual/native-image/BuildOutput.md
+------------------------------------------------------------------------------------------------------------------------
+Warning: The host machine does not support all features of 'x86-64-v3'. Falling back to '-march=compatibility' for best compatibility.
+Warning: Could not resolve class com.github.luben.zstd.ZstdCompressCtx for reflection configuration. Reason: java.lang.ClassNotFoundException: com.github.luben.zstd.ZstdCompressCtx.
+Warning: Could not resolve class io.netty.handler.ssl.OpenSslClientSessionCache for reflection configuration. Reason: java.lang.NoClassDefFoundError: io/netty/internal/tcnative/SSLSessionCache.
+Warning: Could not resolve class io.netty.handler.ssl.ReferenceCountedOpenSslClientContext$ExtendedTrustManagerVerifyCallback for reflection configuration. Reason: java.lang.NoClassDefFoundError: io/netty/internal/tcnative/CertificateVerifier.
+Warning: Could not resolve class io.netty.handler.ssl.ReferenceCountedOpenSslServerContext$ExtendedTrustManagerVerifyCallback for reflection configuration. Reason: java.lang.NoClassDefFoundError: io/netty/internal/tcnative/CertificateVerifier.
+Warning: Could not resolve class io.netty.handler.ssl.ReferenceCountedOpenSslServerContext$OpenSslServerCertificateCallback for reflection configuration. Reason: java.lang.NoClassDefFoundError: io/netty/internal/tcnative/CertificateCallback.
+Warning: Could not resolve class org.conscrypt.ConscryptEngine for reflection configuration. Reason: java.lang.ClassNotFoundException: org.conscrypt.ConscryptEngine.
+Warning: Could not resolve class org.conscrypt.ConscryptEngine for reflection configuration. Reason: java.lang.ClassNotFoundException: org.conscrypt.ConscryptEngine.
+Warning: Could not resolve class org.conscrypt.ConscryptEngine for reflection configuration. Reason: java.lang.ClassNotFoundException: org.conscrypt.ConscryptEngine.
+Warning: Could not resolve class io.netty.resolver.dns.macos.DnsResolver for reflection configuration. Reason: java.lang.ClassNotFoundException: io.netty.resolver.dns.macos.DnsResolver.
+Warning: Could not resolve class io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider for reflection configuration. Reason: java.lang.ClassNotFoundException: io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider.
+Warning: Method ch.qos.logback.core.encoder.LayoutWrappingEncoder.setParent(Appender) not found.
+Warning: Could not resolve class com.aayushatharva.brotli4j.Brotli4jLoader for reflection configuration. Reason: java.lang.ClassNotFoundException: com.aayushatharva.brotli4j.Brotli4jLoader.
+Warning: Could not resolve class com.github.luben.zstd.Zstd for reflection configuration. Reason: java.lang.ClassNotFoundException: com.github.luben.zstd.Zstd.
+Warning: Could not resolve class com.ning.compress.lzf.impl.UnsafeChunkDecoder for reflection configuration. Reason: java.lang.ClassNotFoundException: com.ning.compress.lzf.impl.UnsafeChunkDecoder.
+Warning: Could not resolve class io.netty.channel.epoll.EpollSocketChannel for reflection configuration. Reason: java.lang.ClassNotFoundException: io.netty.channel.epoll.EpollSocketChannel.
+Warning: Could not resolve class org.apache.commons.logging.LogFactory for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.commons.logging.LogFactory.
+Warning: Could not resolve class org.apache.commons.logging.impl.Log4JLogger for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.commons.logging.impl.Log4JLogger.
+Warning: Could not resolve class org.apache.commons.logging.impl.LogFactoryImpl for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.commons.logging.impl.LogFactoryImpl.
+Warning: Could not resolve class org.apache.commons.logging.impl.WeakHashtable for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.commons.logging.impl.WeakHashtable.
+Warning: Could not resolve class org.apache.log4j.Level for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.log4j.Level.
+Warning: Could not resolve class org.apache.log4j.Priority for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.log4j.Priority.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.COMPOSITE$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.COMPOSITE$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.DH$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.DH$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.DSA$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.DSA$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.DSTU4145$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.DSTU4145$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.EC$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.EC$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.ECGOST$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.ECGOST$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.EdEC$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.EdEC$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.ElGamal$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.ElGamal$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.GM$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.GM$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.GOST$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.GOST$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.IES$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.IES$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.RSA$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.RSA$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.X509$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.X509$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA256 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.rsa.DigestSignatureSpi$SHA256.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.asymmetric.x509.CertificateFactory for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.asymmetric.x509.CertificateFactory.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.Blake2b$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.Blake2b$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.Blake2s$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.Blake2s$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.DSTU7564$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.DSTU7564$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.GOST3411$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.GOST3411$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.Haraka$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.Haraka$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.Keccak$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.Keccak$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.MD2$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.MD2$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.MD4$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.MD4$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.MD5$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.MD5$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.RIPEMD128$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.RIPEMD128$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.RIPEMD160$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.RIPEMD160$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.RIPEMD256$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.RIPEMD256$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.RIPEMD320$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.RIPEMD320$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.SHA1$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.SHA1$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.SHA224$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.SHA224$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.SHA256$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.SHA256$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.SHA3$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.SHA3$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.SHA384$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.SHA384$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.SHA512$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.SHA512$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.SM3$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.SM3$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.Skein$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.Skein$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.Tiger$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.Tiger$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.digest.Whirlpool$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.digest.Whirlpool$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.drbg.DRBG$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.drbg.DRBG$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.keystore.BC$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.keystore.BC$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.keystore.BCFKS$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.keystore.BCFKS$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.keystore.PKCS12$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.keystore.PKCS12$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.AES$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.AES$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.ARC4$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.ARC4$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.ARIA$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.ARIA$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Blowfish$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Blowfish$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.CAST5$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.CAST5$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.CAST6$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.CAST6$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Camellia$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Camellia$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.ChaCha$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.ChaCha$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.DES$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.DES$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.DESede$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.DESede$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.DSTU7624$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.DSTU7624$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.GOST28147$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.GOST28147$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.GOST3412_2015$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.GOST3412_2015$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Grain128$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Grain128$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Grainv1$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Grainv1$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.HC128$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.HC128$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.HC256$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.HC256$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.IDEA$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.IDEA$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Noekeon$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Noekeon$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.OpenSSLPBKDF$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.OpenSSLPBKDF$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF1$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF1$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.PBEPBKDF2$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.PBEPKCS12$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.PBEPKCS12$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Poly1305$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Poly1305$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.RC2$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.RC2$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.RC5$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.RC5$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.RC6$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.RC6$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Rijndael$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Rijndael$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.SCRYPT$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.SCRYPT$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.SEED$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.SEED$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.SM4$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.SM4$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Salsa20$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Salsa20$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Serpent$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Serpent$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Shacal2$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Shacal2$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.SipHash$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.SipHash$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.SipHash128$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.SipHash128$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Skipjack$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Skipjack$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.TEA$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.TEA$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.TLSKDF$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.TLSKDF$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Threefish$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Threefish$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Twofish$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Twofish$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.VMPC$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.VMPC$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.VMPCKSA3$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.VMPCKSA3$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.XSalsa20$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.XSalsa20$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.XTEA$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.XTEA$Mappings.
+Warning: Could not resolve class org.bouncycastle.jcajce.provider.symmetric.Zuc$Mappings for reflection configuration. Reason: java.lang.ClassNotFoundException: org.bouncycastle.jcajce.provider.symmetric.Zuc$Mappings.
+Warning: Could not resolve class org.conscrypt.Conscrypt for reflection configuration. Reason: java.lang.ClassNotFoundException: org.conscrypt.Conscrypt.
+Warning: Could not resolve class org.conscrypt.OpenSSLContextImpl$TLSv13 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.conscrypt.OpenSSLContextImpl$TLSv13.
+Warning: Could not resolve class org.hamcrest.number.OrderingComparison for reflection configuration. Reason: java.lang.ClassNotFoundException: org.hamcrest.number.OrderingComparison.
+[1/8] Initializing...                                                                                   (48.8s @ 0.12GB)
+ Java version: 20.0.2+9, vendor version: Oracle GraalVM 20.0.2+9.1
+ Graal compiler: optimization level: 2, target machine: compatibility, PGO: ML-inferred
+ C compiler: cl.exe (microsoft, x64, 19.38.32919)
+ Garbage collector: Serial GC (max heap size: 80% of RAM)
+ 1 user-specific feature(s)
+ - io.micronaut.core.io.service.ServiceLoaderFeature
+[2/8] Performing analysis...  [******]                                                                  (55.3s @ 1.45GB)
+  13,361 (89.43%) of 14,940 types reachable
+  20,007 (59.91%) of 33,395 fields reachable
+  73,783 (63.81%) of 115,635 methods reachable
+   4,421 types,   458 fields, and 4,162 methods registered for reflection
+      78 types,    55 fields, and    70 methods registered for JNI access
+       5 native libraries: crypt32, ncrypt, psapi, version, winhttp
+[3/8] Building universe...                                                                               (4.6s @ 1.83GB)
+[4/8] Parsing methods...      [***]                                                                     (10.5s @ 1.96GB)
+[5/8] Inlining methods...     [***]                                                                      (1.4s @ 2.14GB)
+[6/8] Compiling methods...    [********]                                                                (76.0s @ 2.35GB)
+[7/8] Layouting methods...    [***]                                                                      (5.6s @ 3.79GB)
+[8/8] Creating image...       [***]                                                                      (6.2s @ 4.42GB)
+  42.76MB (61.70%) for code area:    43,164 compilation units
+  25.98MB (37.49%) for image heap:  333,084 objects and 293 resources
+ 576.42kB ( 0.81%) for other data
+  69.31MB in total
+------------------------------------------------------------------------------------------------------------------------
+Top 10 origins of code area:                                Top 10 object types in image heap:
+  15.94MB java.base                                            8.70MB byte[] for code metadata
+   4.27MB svm.jar (Native Image)                               3.12MB byte[] for java.lang.String
+   3.47MB java.xml                                             2.97MB java.lang.Class
+   1.54MB micronaut-serde-support-2.0.2.jar                    2.31MB java.lang.String
+   1.46MB netty-buffer-4.1.96.Final.jar                        2.26MB byte[] for general heap data
+   1.24MB micronaut-inject-4.0.5.jar                         864.78kB byte[] for reflection metadata
+   1.13MB micronaut-http-4.0.5.jar                           626.30kB com.oracle.svm.core.hub.DynamicHubCompanion
+   1.03MB micronaut-http-server-netty-4.0.5.jar              388.84kB c.o.svm.core.hub.DynamicHub$ReflectionMetadata
+ 961.93kB reactor-core-3.5.8.jar                             345.19kB java.util.HashMap$Node
+ 856.15kB netty-codec-http2-4.1.96.Final.jar                 323.05kB java.lang.String[]
+  10.61MB for 51 more packages                                 3.44MB for 2771 more object types
+Warning: The host machine does not support all features of 'x86-64-v3'. Falling back to '-march=compatibility' for best compatibility.
+------------------------------------------------------------------------------------------------------------------------
+Recommendations:
+ PGO:  Use Profile-Guided Optimizations ('--pgo') for improved throughput.
+ HEAP: Set max heap for improved and more predictable memory usage.
+ CPU:  Enable more CPU features with '-march=native' for improved performance.
+ QBM:  Use the quick build mode ('-Ob') to speed up builds during development.
+ BRPT: Try out the new build reports with '-H:+BuildReport'.
+------------------------------------------------------------------------------------------------------------------------
+                        9.9s (4.7% of total time) in 173 GCs | Peak RSS: 6.23GB | CPU load: 4.31
+------------------------------------------------------------------------------------------------------------------------
+Produced artifacts:
+ C:\Users\me\Desktop\com.tugalsan.spi.cloud\target\cloud.exe (executable)
+========================================================================================================================
+Finished generating 'cloud' in 3m 30s.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:38 min
+[INFO] Finished at: 2023-08-31T09:14:01+03:00
+[INFO] ------------------------------------------------------------------------

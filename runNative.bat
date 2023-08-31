@@ -1,0 +1,1 @@
+C:\Users\me\Desktop\com.tugalsan.spi.cloud\target\cloud.exe
