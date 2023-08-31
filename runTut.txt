@@ -30,3 +30,5 @@ https://github.com/tugalsan/com.tugalsan.tut.graalvm/blob/main/install.txt
 [TODO]
 - how to change groupId from "com.tugalsan.spi" to "com.tugalsan"
 - how to change artifactId from "cloud" to "com.tugalsan.spi.cloud"
+- how to run it with PKCS12
+- what to do with native compile warnings
